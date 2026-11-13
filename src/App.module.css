@@ -1,0 +1,15 @@
+.app {
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+  padding-block: 4rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.description {
+  color: #a1a1aa;
+}
