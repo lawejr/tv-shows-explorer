@@ -1,0 +1,168 @@
+/* 01 — a cobalt file browser, with a deliberately rigid, pixel-like rhythm. */
+[data-theme="dos"] { background: #090e80; color: #e5e6ff; font-family: 'Courier New', monospace; }
+[data-theme="dos"] .concept-page { padding: 0 46px; background-image: repeating-linear-gradient(0deg, transparent, transparent 3px, #0000000a 3px, #0000000a 4px); }
+[data-theme="dos"] .site-header { border-bottom: 3px double #8e98e7; min-height: 75px; }
+[data-theme="dos"] .wordmark { color: #f4ef9a; font-weight: normal; letter-spacing: 1px; }
+[data-theme="dos"] .header-detail { letter-spacing: 0; }
+[data-theme="dos"] .header-detail b { color: #76e3c2; margin-left: 35px; font-weight: normal; }
+[data-theme="dos"] .hero { padding: 43px 0 37px; }
+[data-theme="dos"] h1 { font-size: clamp(34px, 4.2vw, 62px); font-weight: bold; letter-spacing: -3px; }
+[data-theme="dos"] .eyebrow { color: #9ca8ed; letter-spacing: 1px; }
+[data-theme="dos"] .subtitle { color: #b7c0ff; }
+.cursor { color: #f7ef9e; }
+.dos-art { max-width: 264px; padding: 18px; color: #9eaaff; }
+.pixel-screen { border: 6px solid; padding: 15px; box-shadow: 9px 9px 0 #000654; position: relative; }
+.pixel-screen::before { content: ''; position: absolute; inset: 7px; border: 1px solid; }
+.pixel-screen span { display: block; text-align: center; font-size: 80px; line-height: 1.3; font-weight: bold; text-shadow: 5px 5px #03075c; }
+.pixel-screen i { font-size: 10px; font-style: normal; display: block; text-align: center; padding-bottom: 10px; }
+.pixel-base { border: 3px solid; margin-top: 15px; padding: 6px 12px; text-align: right; }
+.dos-art small { display: block; font-size: 8px; margin-top: 20px; text-align: center; letter-spacing: 1px; }
+[data-theme="dos"] .search-area { border: 3px double #a9b4fc; padding: 22px; box-shadow: 7px 7px 0 #04064b; }
+[data-theme="dos"] .search-area label { color: #f4ef9a; }
+[data-theme="dos"] input { background: #030956; color: #fff; }
+[data-theme="dos"] input::placeholder { color: #a9aee2; }
+[data-theme="dos"] .input-group button { background: #b7bddd; color: #0a126f; box-shadow: inset -3px -3px #69739b, inset 3px 3px #ebedff; }
+[data-theme="dos"] .search-hint { color: #b2b8e8; font-size: 10px; }
+[data-theme="dos"] .empty-state { border: 1px dashed #606bbb; color: #b9c1ff; }
+[data-theme="dos"] .empty-state h2 { color: #f2eea8; font-size: 17px; }
+[data-theme="dos"] .results-heading h2 { font-size: 24px; }
+[data-theme="dos"] .section-kicker { color: #a5afef; }
+[data-theme="dos"] .filters button { border-color: #7885d5; }
+[data-theme="dos"] .filters button[aria-pressed="true"] { background: #9fe4de; color: #070c6b; border-color: #9fe4de; }
+[data-theme="dos"] .show-card { border: 3px double #8f9be4; background: #111879; }
+[data-theme="dos"] .card-image { height: 190px; background: #05094c; border-bottom: 1px solid #8996de; }
+[data-theme="dos"] .poster { height: 100%; filter: grayscale(1) sepia(1) hue-rotate(178deg) saturate(2); opacity: .85; }
+[data-theme="dos"] .card-number { color: #090e80; background: #b8c5e9; top: 0; left: 0; }
+[data-theme="dos"] .card-meta { color: #b1bcf0; font-size: 9px; }
+[data-theme="dos"] .card-meta b { color: #f2ee9c; }
+[data-theme="dos"] .show-card h3 { font-size: 19px; color: #f8f1ac; min-height: 46px; }
+[data-theme="dos"] .show-card p { color: #b9c2ef; }
+[data-theme="dos"] .card-genres { border-top: 1px dashed #6573c5; padding-top: 12px; color: #a1e4df; }
+[data-theme="dos"] .pagination { border-top: 1px solid #6573c5; }
+[data-theme="dos"] .pagination [aria-current] { background: #bec8eb; color: #0c126e; }
+[data-theme="dos"] .site-footer { border-top: 3px double #8e98e7; color: #aeb9f5; font-size: 9px; }
+
+/* 02 — a quiet botanical atlas with specimen labels and generous paper margins. */
+[data-theme="botanical"] { background-color: #f5f3e9; color: #2e493e; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.055' filter='url(%23n)'/%3E%3C/svg%3E"); }
+[data-theme="botanical"] .site-header { border-bottom: 1px solid #bcc4b4; }
+[data-theme="botanical"] .wordmark { font-family: Georgia, serif; font-size: 26px; font-weight: normal; }
+[data-theme="botanical"] .header-detail { color: #6b7b69; font-size: 9px; }
+[data-theme="botanical"] h1 { font-family: Georgia, serif; font-size: clamp(38px, 4.3vw, 66px); line-height: 1.15; }
+[data-theme="botanical"] h1 em { color: #708260; font-weight: normal; }
+[data-theme="botanical"] .hero { grid-template-columns: 1fr 290px; padding-top: 40px; padding-bottom: 35px; }
+[data-theme="botanical"] .eyebrow { color: #788569; }
+[data-theme="botanical"] .subtitle { color: #687061; }
+.plant-art { width: 245px; height: 275px; color: #5c7352; margin: -20px auto; position: relative; transform: rotate(8deg); }
+.plant-art svg { height: 100%; width: 100%; }
+.plant-art span { position: absolute; bottom: -5px; right: -15px; font: italic 10px Georgia, serif; transform: rotate(-8deg); }
+[data-theme="botanical"] .search-area form { display: block; }
+[data-theme="botanical"] .search-area label { font-size: 9px; text-transform: uppercase; letter-spacing: 1.8px; display: block; margin-bottom: 12px; }
+[data-theme="botanical"] .input-group { border-bottom: 1px solid #7d8e73; background: #fffcf580; }
+[data-theme="botanical"] input { background: transparent; font: 20px Georgia, serif; padding-left: 0; }
+[data-theme="botanical"] input::placeholder { color: #7b8674; }
+[data-theme="botanical"] .input-group button { background: #304d3e; color: #f5f1de; font-weight: normal; letter-spacing: .5px; }
+[data-theme="botanical"] .search-hint { color: #697561; }
+[data-theme="botanical"] .empty-state { border: 1px solid #ccd1c0; position: relative; }
+[data-theme="botanical"] .empty-state::before { content: ''; position: absolute; inset: 6px; border: 1px solid #dde0d2; pointer-events: none; }
+[data-theme="botanical"] .empty-state h2 { font: 25px Georgia, serif; }
+[data-theme="botanical"] .empty-state p { color: #6e7965; }
+[data-theme="botanical"] .empty-symbol { color: #809674; }
+[data-theme="botanical"] .results-heading h2 { font-family: Georgia, serif; font-size: 33px; }
+[data-theme="botanical"] .section-kicker { color: #7d886e; }
+[data-theme="botanical"] .filters button { border-color: #c6ccba; border-radius: 30px; }
+[data-theme="botanical"] .filters button[aria-pressed="true"] { color: #fcfaed; background: #435e46; border-color: #435e46; }
+[data-theme="botanical"] .show-card { padding: 10px; background: #fffdf6; border: 1px solid #d3d7c8; box-shadow: 2px 4px 0 #dfe1d260; }
+[data-theme="botanical"] .card-image { background: #e7e9db; height: 236px; padding: 22px; }
+[data-theme="botanical"] .poster { height: 100%; filter: saturate(.65); transform: rotate(-3deg); }
+[data-theme="botanical"] .card-number { color: #4a6046; background: #fcfaed; border: 1px solid #d6dac8; top: 10px; left: 10px; font-size: 8px; }
+[data-theme="botanical"] .card-body { padding: 20px 10px 10px; }
+[data-theme="botanical"] .show-card h3 { font-family: Georgia, serif; min-height: 53px; }
+[data-theme="botanical"] .show-card p { color: #737a68; }
+[data-theme="botanical"] .card-meta { color: #6a785e; }
+[data-theme="botanical"] .card-genres { border-top: 1px solid #dee2d2; padding-top: 12px; font-style: italic; color: #70835e; }
+[data-theme="botanical"] .pagination { border-top: 1px solid #c5ccba; }
+[data-theme="botanical"] .pagination [aria-current] { background: #435e46; color: #fff; border-radius: 50%; }
+[data-theme="botanical"] .site-footer { border-top: 1px solid #bcc4b4; }
+[data-theme="botanical"] .site-footer > span:first-child { font: italic 15px Georgia, serif; }
+[data-theme="botanical"] .site-footer b { font-size: 30px; }
+
+/* 03 — a diner menu: big red lettering, a plate seal, and numbered orders. */
+[data-theme="diner"] { background: #fff5df; color: #a22d27; }
+[data-theme="diner"] .concept-page { border-left: 1px solid #e8d2b8; border-right: 1px solid #e8d2b8; }
+[data-theme="diner"] .site-header { border-bottom: 2px solid #a22d27; }
+[data-theme="diner"] .wordmark { font-size: 28px; font-weight: 900; font-style: italic; letter-spacing: -1.5px; }
+[data-theme="diner"] .header-detail { font-size: 8px; font-weight: bold; letter-spacing: 1px; }
+[data-theme="diner"] .hero { grid-template-columns: 1fr 320px; padding: 42px 0; }
+[data-theme="diner"] h1 { font: 900 clamp(48px, 5.7vw, 85px)/.96 Georgia, serif; letter-spacing: -4px; }
+[data-theme="diner"] h1 > span { font-style: italic; }
+[data-theme="diner"] .eyebrow { font-size: 9px; font-weight: bold; letter-spacing: 1.2px; }
+[data-theme="diner"] .subtitle { color: #835e4d; font-size: 13px; }
+.diner-art { position: relative; padding: 15px; transform: rotate(12deg); }
+.plate { border: 2px solid #b7332a; border-radius: 50%; width: 245px; height: 245px; display: flex; flex-direction: column; align-items: center; justify-content: center; outline: 2px solid #b7332a; outline-offset: -13px; box-shadow: 0 0 0 8px #fff5df, 0 0 0 9px #bd6651; background: #f9e9cb; }
+.plate span { font: bold 14px Georgia, serif; }
+.plate i { font: 900 39px/.98 Georgia, serif; text-align: center; margin: 10px 0 5px; letter-spacing: -2px; }
+.plate b { font-size: 30px; }
+.diner-sticker { position: absolute; bottom: 8px; right: -2px; background: #b83229; color: #fff4db; padding: 18px 22px; font-size: 11px; line-height: 1.5; transform: rotate(-23deg); border: 2px solid #fff5df; }
+[data-theme="diner"] .search-area { background: #a22d27; color: #fff4dd; padding: 22px 26px 17px; border-radius: 4px; }
+[data-theme="diner"] .search-area form { gap: 25px; }
+[data-theme="diner"] .search-area label { font: italic 21px/1.2 Georgia, serif; white-space: normal; max-width: 125px; }
+[data-theme="diner"] .input-group { background: #fff5df; padding: 5px; border-radius: 2px; }
+[data-theme="diner"] .input-group input { background: transparent; color: #653d31; padding: 13px; font-size: 13px; }
+[data-theme="diner"] input::placeholder { color: #927566; }
+[data-theme="diner"] .input-group button { color: #a22d27; background: #f0ce8d; padding: 13px 23px; }
+[data-theme="diner"] .search-hint { color: #f5cfb9; font-size: 9px; }
+[data-theme="diner"] .empty-state { border: 2px dashed #dab495; background: #fbecd2; }
+[data-theme="diner"] .empty-state h2 { font: bold italic 28px Georgia, serif; }
+[data-theme="diner"] .empty-state p { color: #886958; }
+[data-theme="diner"] .results-heading { border-bottom: 2px solid; padding-bottom: 19px; }
+[data-theme="diner"] .results-heading h2 { font: bold italic 42px Georgia, serif; }
+[data-theme="diner"] .filters { justify-content: center; }
+[data-theme="diner"] .filters button { border: 0; border-bottom: 2px solid transparent; padding: 9px 13px; text-transform: uppercase; font-size: 10px; font-weight: bold; }
+[data-theme="diner"] .filters button[aria-pressed="true"] { border-color: #a22d27; }
+[data-theme="diner"] .cards { grid-template-columns: 1fr; gap: 0; }
+[data-theme="diner"] .show-card { display: grid; grid-template-columns: 145px 1fr; gap: 26px; border-top: 1px dashed #c18d70; padding: 23px 0; }
+[data-theme="diner"] .show-card:hover { transform: translateX(4px); }
+[data-theme="diner"] .card-image { height: 155px; background: #f0ddba; overflow: visible; border: 5px solid #fffcf0; box-shadow: 0 2px 7px #673c2522; transform: rotate(-3deg); }
+[data-theme="diner"] .poster { height: 100%; }
+[data-theme="diner"] .card-number { left: -15px; top: 10px; border-radius: 50%; width: 39px; height: 39px; padding: 13px 0; text-align: center; background: #a22d27; color: #fff1d6; font-size: 10px; font-weight: bold; }
+[data-theme="diner"] .card-body { padding: 3px 0; display: flex; flex-direction: column; }
+[data-theme="diner"] .card-meta { order: 0; color: #98745d; }
+[data-theme="diner"] .card-meta b { color: #a22d27; }
+[data-theme="diner"] .show-card h3 { font: bold 28px Georgia, serif; margin: 10px 0; }
+[data-theme="diner"] .show-card p { color: #886958; margin: 0 0 13px; }
+[data-theme="diner"] .card-genres { text-transform: uppercase; font-size: 9px; letter-spacing: 1px; margin-top: auto; }
+[data-theme="diner"] .pagination { border-top: 2px solid #a22d27; margin-top: 0; }
+[data-theme="diner"] .pagination [aria-current] { background: #a22d27; color: #fff5df; }
+[data-theme="diner"] .site-footer { border-top: 9px solid transparent; border-image: repeating-linear-gradient(90deg,#a22d27 0 9px,transparent 9px 18px) 9; }
+[data-theme="diner"] .site-footer > span:first-child { font: bold italic 16px Georgia, serif; }
+@media (max-width: 1000px) {
+  [data-theme="botanical"] .hero { grid-template-columns: 1fr 210px; }
+  .plant-art { width: 200px; }
+  [data-theme="diner"] .hero { grid-template-columns: 1fr 230px; }
+  .plate { width: 190px; height: 190px; }
+  .plate i { font-size: 30px; }
+  .diner-sticker { font-size: 9px; padding: 12px; }
+}
+@media (max-width: 700px) {
+  [data-theme="dos"] .concept-page { padding: 0 20px; }
+  [data-theme="dos"] .hero, [data-theme="botanical"] .hero, [data-theme="diner"] .hero { grid-template-columns: 1fr; padding: 32px 0; }
+  [data-theme="dos"] h1 { font-size: 35px; letter-spacing: -2px; }
+  [data-theme="dos"] .search-area { padding: 15px; }
+  [data-theme="dos"] .card-image { height: 220px; }
+  [data-theme="dos"] .show-card h3, [data-theme="botanical"] .show-card h3 { min-height: 0; }
+  [data-theme="botanical"] .wordmark { font-size: 23px; }
+  [data-theme="botanical"] input { font-size: 15px; }
+  [data-theme="botanical"] h1 { font-size: 38px; }
+  [data-theme="diner"] h1 { font-size: 54px; letter-spacing: -2px; }
+  [data-theme="diner"] .search-area { padding: 17px; }
+  [data-theme="diner"] .search-area label { max-width: none; font-size: 19px; }
+  [data-theme="diner"] .input-group input { padding: 10px 5px; font-size: 11px; }
+  [data-theme="diner"] .input-group button { padding: 10px; }
+  [data-theme="diner"] .show-card { grid-template-columns: 90px 1fr; gap: 17px; }
+  [data-theme="diner"] .card-image { height: 125px; margin-left: 7px; }
+  [data-theme="diner"] .card-number { width: 30px; height: 30px; padding: 9px 0; left: -13px; }
+  [data-theme="diner"] .show-card h3 { font-size: 21px; }
+  [data-theme="diner"] .card-meta { font-size: 8px; letter-spacing: 0; }
+  [data-theme="diner"] .show-card p { font-size: 11px; }
+  [data-theme="diner"] .results-heading h2 { font-size: 36px; }
+}
