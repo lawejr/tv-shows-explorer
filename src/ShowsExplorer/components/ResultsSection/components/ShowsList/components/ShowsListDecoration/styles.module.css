@@ -1,0 +1,92 @@
+.wood-shelf {
+  height: 22px;
+  background: repeating-linear-gradient(2deg, #5d4836 0 2px, #6b533c 2px 4px, #735940 4px 5px);
+  border-top: 5px solid #9a7d55;
+  box-shadow: 0 15px 22px #0008;
+  position: relative;
+}
+
+.prop-shelf {
+  height: 95px;
+  display: flex;
+  gap: 4px;
+  align-items: end;
+  padding: 10px 15px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.prop-shelf > i {
+  height: calc(67px + mod(var(--i), 3) * 4px);
+  min-height: 67px;
+  width: 22px;
+  background: linear-gradient(90deg, #101817, var(--prop) 30%, var(--prop) 80%, #101817);
+  border: 1px solid #9993;
+  flex-shrink: 0;
+  transform: rotate(-2deg);
+}
+
+.prop-shelf b {
+  display: block;
+  writing-mode: vertical-rl;
+  font: 7px monospace;
+  margin: 8px 5px;
+  color: #d4cdb4;
+  text-transform: uppercase;
+}
+
+.dvd-disc {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: -1px;
+  background: conic-gradient(#a6bab8, #848db3, #eadba8, #b7c9c2, #8f9eaa, #a6bab8);
+  border: 1px solid #ddd7;
+  box-shadow: -4px 0 8px #0004;
+}
+
+.dvd-disc::after {
+  content: "";
+  position: absolute;
+  inset: 29px;
+  background: #273632;
+  border-radius: 50%;
+  border: 4px solid #849b93;
+}
+
+.wood-shelf {
+  height: 13px;
+  border-top-width: 3px;
+}
+
+@media (--mobile-screen) {
+  .prop-shelf {
+    height: 72px;
+  }
+  .prop-shelf > i {
+    min-height: 48px;
+    height: 50px;
+    width: 17px;
+  }
+  .dvd-disc {
+    width: 60px;
+    height: 60px;
+  }
+  .dvd-disc::after {
+    inset: 23px;
+    border-width: 2px;
+  }
+}
+
+.wood-shelf {
+  height: 13px;
+  border-top-width: 3px;
+}
+
+@media (--mobile-screen) {
+  .prop-shelf > i {
+    height: 50px !important;
+  }
+}

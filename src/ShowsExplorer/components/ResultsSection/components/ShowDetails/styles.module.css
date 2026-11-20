@@ -1,0 +1,280 @@
+.tv-corner {
+  position: relative;
+  width: 100%;
+  max-width: 632px;
+  align-self: start;
+  padding-bottom: 38px;
+}
+
+.crt {
+  aspect-ratio: 4 / 3;
+  max-height: 474px;
+  display: flex;
+  flex-direction: column;
+  padding: 19px 17px 12px;
+  border-radius: 24px 24px 13px 13px;
+  background: linear-gradient(125deg, #5c6260, #292e2f 45%, #393e3f);
+  border: 2px solid #777d7255;
+  box-shadow:
+    12px 20px 30px #0006,
+    inset 1px 2px 3px #bcc0aa44;
+  transform: perspective(900px) rotateY(6deg);
+}
+
+.crt-glass {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  border: 9px solid #171c1b;
+  border-radius: 44% / 8%;
+  background: radial-gradient(ellipse, #23413e, #0b1919);
+  overflow: hidden;
+  box-shadow: inset 0 0 30px #000;
+  color: #b0d1ad;
+}
+
+.crt-osd {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  font: 9px monospace;
+  color: #a7d4a9;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.tape-preview {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  padding: 48px 20px 20px;
+}
+
+.tape-preview > b {
+  font:
+    900 42px/0.95 "Courier New",
+    monospace;
+  letter-spacing: -2px;
+  text-shadow: 2px 0 #75a99466;
+  text-transform: uppercase;
+}
+
+.tape-preview > p {
+  font: 11px/1.8 monospace;
+  opacity: 0.7;
+}
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent 0 3px, #0003 3px 4px);
+  opacity: 0.6;
+}
+
+.scanlines::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(transparent, #b7f0c30a, transparent);
+  animation: scan-screen 9s linear infinite;
+}
+
+@keyframes scan-screen {
+  from {
+    top: -30px;
+  }
+  to {
+    top: 100%;
+  }
+}
+
+.tv-bottom {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 3px 2px;
+  color: #aaafa5;
+}
+
+.tv-bottom span {
+  flex: 1;
+  font-size: 7px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tv-bottom i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #111817;
+  box-shadow: 1px 1px #69736d;
+}
+
+.tv-bottom b {
+  font-size: 7px;
+  color: #a6dd81;
+}
+
+.vcr {
+  height: 39px;
+  margin: 8px 7px 0;
+  background: linear-gradient(#434a47, #242b29);
+  border: 1px solid #606960;
+  box-shadow: 8px 12px 17px #0006;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  transform: rotate(1deg);
+}
+
+.vcr > span {
+  font:
+    7px Arial,
+    sans-serif;
+  text-transform: uppercase;
+}
+
+.vcr > div {
+  flex: 1;
+  height: 9px;
+  background: #101713;
+  border-bottom: 1px solid #676d59;
+}
+
+.vcr b {
+  background: #0e1812;
+  color: #a1cd7f;
+  font: 10px monospace;
+  padding: 3px;
+}
+
+.rental-sticker {
+  position: absolute;
+  bottom: 1px;
+  right: 15px;
+  transform: rotate(-6deg);
+  background: #d8ba6d;
+  color: #352b21;
+  padding: 10px 15px;
+  font: 8px/1.5 monospace;
+  box-shadow: 3px 3px #0004;
+  text-transform: uppercase;
+}
+
+.rental-sticker strong {
+  font-size: 10px;
+}
+
+.tv-show {
+  height: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: start;
+}
+
+.poster {
+  flex-shrink: 0;
+  width: 65px;
+  height: 100px;
+  filter: saturate(0.5);
+}
+
+.tv-show > div {
+  min-width: 0;
+  height: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+}
+
+.summary {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.summary p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tv-show h2 {
+  font:
+    bold 16px/1.1 "Courier New",
+    monospace;
+  margin: 8px 0;
+}
+
+.tv-show p {
+  font: 9px/1.5 monospace;
+  margin: 0;
+}
+
+.tv-show small {
+  padding-top: 4px;
+  font: 7px monospace;
+}
+
+.tuning {
+  animation: tune 0.45s ease-out;
+}
+
+@keyframes tune {
+  0% {
+    filter: brightness(2);
+  }
+  35% {
+    filter: brightness(0.4);
+  }
+  100% {
+    filter: none;
+  }
+}
+
+@media (--mobile-screen) {
+  .tv-corner {
+    max-width: 340px;
+    width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  .crt {
+    padding: 12px 12px 8px;
+  }
+  .tape-preview {
+    padding: 35px 16px 13px;
+  }
+  .tape-preview > b {
+    font-size: 29px;
+  }
+  .tape-preview > p {
+    font-size: 9px;
+  }
+  .tv-bottom {
+    padding-top: 9px;
+  }
+  .rental-sticker {
+    bottom: -8px;
+    font-size: 6px;
+    padding: 7px 10px;
+  }
+  .rental-sticker strong {
+    font-size: 8px;
+  }
+}
+
+.crt-glass {
+  animation: tune 0.45s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt-glass,
+  .scanlines::after {
+    animation: none;
+  }
+}

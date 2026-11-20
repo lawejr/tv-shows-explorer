@@ -1,0 +1,22 @@
+.rental-stage {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.9fr) minmax(0, 1.6fr);
+  gap: 40px;
+  align-items: center;
+  padding: 28px 0 15px;
+}
+
+@media (--tablet-screen) {
+  .rental-stage {
+    gap: 20px;
+    grid-template-columns: 0.85fr 1.25fr;
+  }
+}
+
+@media (--mobile-screen) {
+  .rental-stage {
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+    gap: 22px;
+  }
+}

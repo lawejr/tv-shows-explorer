@@ -1,12 +1,7 @@
-import styles from './App.module.css'
+import { ShowsExplorer } from './ShowsExplorer'
 
-function App() {
+export default function App() {
   return (
-    <main className={styles.app}>
-      <h1 className={styles.title}>TV Shows Explorer</h1>
-      <p className={styles.description}>Базовый проект готов к разработке.</p>
-    </main>
+    <ShowsExplorer />
   )
 }
-
-export default App

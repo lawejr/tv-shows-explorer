@@ -1,0 +1,60 @@
+.room-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  min-height: 0;
+}
+
+.room-genres {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 7px;
+}
+
+.room-genres button,
+.room-pages button {
+  background: transparent;
+  color: inherit;
+  border: 1px solid #ffffff30;
+  padding: 8px 12px;
+  font-size: 10px;
+}
+
+.room-genres [aria-pressed="true"],
+.room-pages [aria-current] {
+  background: #e7b680;
+  color: #242324;
+  border-color: #e7b680;
+}
+
+.room-pages {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.room-pages > span {
+  font-size: 9px;
+  margin-right: 10px;
+}
+
+@media (--mobile-screen) {
+  .room-controls {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    justify-content: center;
+  }
+  .room-genres {
+    gap: 5px;
+  }
+  .room-genres button,
+  .room-pages button {
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+}
