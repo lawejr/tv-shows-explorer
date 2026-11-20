@@ -1,0 +1,102 @@
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  display: block;
+  font:
+    23px Georgia,
+    serif;
+  white-space: nowrap;
+}
+
+.prompt {
+  display: block;
+  margin-top: 6px;
+  font: 8px monospace;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.counter input {
+  width: 100%;
+  min-width: 0;
+  padding: 16px 12px;
+  border: 0;
+  border-bottom: 1px solid #8a7966;
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+}
+
+.counter input::placeholder {
+  color: inherit;
+  opacity: 0.45;
+}
+
+.counter {
+  margin-top: 23px;
+  padding: 21px 25px;
+  background: linear-gradient(120deg, #d8c9a9, #c5b290);
+  color: #362f26;
+  border-top: 5px solid #f0dfbd;
+  box-shadow:
+    0 10px 0 #7b664c,
+    0 18px 25px #0006;
+}
+
+@media (--tablet-screen) {
+  .counter {
+    gap: 14px;
+    padding: 18px;
+  }
+  .title {
+    font-size: 18px;
+  }
+}
+
+@media (--mobile-screen) {
+  .counter {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 17px;
+  }
+  .counter label {
+    width: 100%;
+  }
+  .counter input {
+    font-size: 12px;
+    padding: 13px 0;
+  }
+}
+
+.searchField {
+  flex: 1;
+  min-width: 0;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.suggestions button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (--mobile-screen) {
+  .searchField {
+    flex-basis: 100%;
+  }
+}

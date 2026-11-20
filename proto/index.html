@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#15151b" />
+    <title>TV Shows Explorer — Design Lab 04</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./new-themes.css" />
+    <link rel="stylesheet" href="./immersive.css" />
+  </head>
+  <body>
+    <header class="prototype-bar">
+      <a class="prototype-brand" href="./">TVE<span>DESIGN LAB / 04</span></a>
+      <nav class="variants" aria-label="Вариант дизайна">
+        <button data-theme="dos" aria-pressed="true"><span>01</span> DOS / TV</button>
+        <button data-theme="cinema" aria-pressed="false"><span>02</span> Кинозал</button>
+        <button data-theme="rental" aria-pressed="false"><span>03</span> Видеопрокат</button>
+        <button data-theme="universe" aria-pressed="false"><span>04</span> Киновселенная</button>
+      </nav>
+      <button class="demo-button" id="demo">Показать выдачу ↗</button>
+    </header>
+    <div class="prototype-note">ИНТЕРАКТИВНЫЙ ПРОТОТИП <span>Демоданные · поиск по названию · 3 сериала на странице</span></div>
+    <main id="app" data-theme="dos"></main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

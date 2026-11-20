@@ -1,0 +1,203 @@
+/* Cinema studies: screening room, film archive, festival programme. */
+.variants button { padding: 10px 14px; }
+.new-concept { overflow: hidden; }
+.new-concept .site-header { min-height: 90px; gap: 20px; }
+.new-concept .header-detail,.cinema-header-mark { font-size: 8px; letter-spacing: 1.6px; }
+.new-concept .new-hero { position: relative; }
+.new-concept .new-hero-copy { position: relative; z-index: 2; }
+.new-concept h1 { font-family: Georgia,serif; font-weight: normal; }
+.new-concept .search-area { position: relative; z-index: 3; }
+.new-concept .search-area form { display: block; }
+.new-concept .search-area label { display: block; font-size: 9px; letter-spacing: 2px; margin-bottom: 13px; }
+.new-concept .input-group input { background: transparent; color: inherit; font-size: 18px; padding-left: 0; }
+.new-concept .input-group input::placeholder { color: inherit; opacity: .5; }
+.new-concept .input-group button { transition: background .2s, box-shadow .2s, transform .2s; }
+.new-concept .input-group button:hover { transform: translateY(-2px); }
+.new-concept .empty-state { min-height: 180px; }
+.new-concept .empty-state h2 { font: 24px Georgia,serif; }
+.new-concept .empty-state small { display: none; }
+.new-concept .results-heading h2 { font-family: Georgia,serif; }
+.new-concept .show-card { animation: frame-in .5s both; }
+.new-concept .show-card:nth-child(2) { animation-delay: .1s; }
+.new-concept .show-card:nth-child(3) { animation-delay: .2s; }
+.new-concept .card-image .poster { height: 100%; }
+.new-concept .pagination,.new-concept .site-footer { border-top: 1px solid; }
+@keyframes frame-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* 02: a widescreen night exterior suspended above velvet seats. */
+[data-theme="cinema"] { background: #101112; color: #ece8df; }
+[data-theme="cinema"] .concept-page { padding: 0 60px; background: radial-gradient(ellipse at 50% 45%,#44423b22,transparent 65%); }
+[data-theme="cinema"] .site-header { border-bottom: 1px solid #49463e; }
+[data-theme="cinema"] .wordmark { font: 600 25px Georgia,serif; letter-spacing: 4px; }
+[data-theme="cinema"] .wordmark span { color: #d6aa69; margin-right: 9px; }
+[data-theme="cinema"] .header-detail { color: #9b978d; }
+[data-theme="cinema"] .cinema-header-mark { color: #dab276; letter-spacing: 1px; }
+[data-theme="cinema"] .new-hero { padding-top: 28px; }
+[data-theme="cinema"] .new-hero-copy { text-align: center; }
+[data-theme="cinema"] .eyebrow { color: #ba9866; font-size: 8px; letter-spacing: 4px; margin-bottom: 20px; }
+[data-theme="cinema"] h1 { font-size: clamp(38px,4vw,58px); letter-spacing: -2px; line-height: 1.08; margin-bottom: 16px; }
+[data-theme="cinema"] h1 em { color: #d5b586; }
+[data-theme="cinema"] .subtitle { color: #98958c; font-size: 11px; }
+.cinema-scene { position: relative; margin-top: 24px; padding: 0 50px 20px; isolation: isolate; }
+.wide-screen { position: relative; overflow: hidden; height: 210px; border: 1px solid #a8b5ad66; box-shadow: 0 0 55px #b7c8bb1a,0 30px 80px #000; background: #111e25; }
+.wide-screen svg { display: block; width: 100%; height: 100%; animation: cinema-dolly 24s ease-in-out infinite alternate; }
+@keyframes cinema-dolly { to { transform: scale(1.08) translateX(-1%); } }
+.projector-beam { position: absolute; top: -150px; bottom: 20px; left: -12%; right: -12%; background: linear-gradient(180deg,#f5e8cf03,#f5e8cf0d); clip-path: polygon(50% 0,90% 100%,10% 100%); z-index: -1; animation: beam-glow 6s ease-in-out infinite alternate; }
+@keyframes beam-glow { to { opacity: .35; } }
+.screen-grain { position: absolute; inset: 0; pointer-events: none; opacity: .1; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+.screen-caption,.screen-format { position: absolute; bottom: 13px; font-size: 7px; letter-spacing: 2px; color: #d6d9d5; }
+.screen-caption { left: 20px; }.screen-format { right: 20px; }
+.seat-row { display: flex; gap: 9px; padding: 0 12px; margin-top: 20px; justify-content: center; perspective: 500px; }
+.seat-row i { width: 55px; height: 24px; border-radius: 13px 13px 2px 2px; background: linear-gradient(#49302c,#231a19); border-top: 1px solid #755347; box-shadow: 4px 3px #080a0b; }
+[data-theme="cinema"] .search-area { margin: 5px auto 0; max-width: 900px; padding: 20px 26px; background: #1b1b19; border: 1px solid #5c51413d; }
+[data-theme="cinema"] .search-area label { color: #b8a487; }
+[data-theme="cinema"] .input-group { border-bottom: 1px solid #565044; gap: 20px; }
+[data-theme="cinema"] .input-group button { background: #d2b07d; color: #241e16; padding: 16px 25px; font-size: 12px; }
+[data-theme="cinema"] .input-group button:hover { background: #e7ca9f; box-shadow: 0 0 25px #d2b07d22; }
+[data-theme="cinema"] .search-hint { color: #938a7c; font-size: 9px; }
+[data-theme="cinema"] .empty-symbol { color: #b99a68; }
+[data-theme="cinema"] .empty-state p { color: #938d81; }
+[data-theme="cinema"] .section-kicker { color: #c0a071; }
+[data-theme="cinema"] .filters button { border-color: #575043; border-radius: 3px; }
+[data-theme="cinema"] .filters button[aria-pressed="true"] { background: #cfac77; border-color: #cfac77; color: #221c13; }
+[data-theme="cinema"] .show-card { background: #1c1d1b; border: 1px solid #49483e; padding: 10px; }
+[data-theme="cinema"] .card-image { height: 240px; background: #252d2b; }
+[data-theme="cinema"] .card-number { background: #151716; color: #d3b17c; }
+[data-theme="cinema"] .card-body { padding: 20px 10px 10px; }
+[data-theme="cinema"] .show-card h3 { font: 25px Georgia,serif; }
+[data-theme="cinema"] .show-card p { color: #a29e92; }
+[data-theme="cinema"] .card-meta,[data-theme="cinema"] .card-genres { color: #bba079; }
+[data-theme="cinema"] .pagination,[data-theme="cinema"] .site-footer { border-color: #49463e; color: #a19a8c; }
+[data-theme="cinema"] .pagination [aria-current] { background: #cfac77; color: #221c13; }
+
+/* 03: an analogue contact sheet, hard light, black ink, a red editor's mark. */
+[data-theme="noir"] { background: #e8e6df; color: #20211f; }
+[data-theme="noir"] .concept-page { padding: 0 60px; }
+[data-theme="noir"] .site-header { border-bottom: 2px solid #222; }
+[data-theme="noir"] .wordmark { font: 900 42px Georgia,serif; letter-spacing: -3px; }
+[data-theme="noir"] .wordmark span { font: 28px Arial,sans-serif; letter-spacing: 0; }
+[data-theme="noir"] .header-detail { color: #6d6b63; }
+[data-theme="noir"] .cinema-header-mark { font-family: 'Courier New',monospace; }
+[data-theme="noir"] .new-hero { display: grid; grid-template-columns: 1.25fr 1fr; gap: 60px; padding: 52px 0 35px; align-items: center; }
+[data-theme="noir"] .eyebrow { font: 9px 'Courier New',monospace; letter-spacing: 2px; }
+[data-theme="noir"] h1 { font-size: clamp(40px,4.7vw,68px); line-height: 1.02; letter-spacing: -3px; }
+[data-theme="noir"] h1 em { position: relative; white-space: nowrap; }
+[data-theme="noir"] h1 em::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 5px; border-bottom: 3px solid #ae3b31; border-radius: 50%; transform: rotate(-3deg); }
+[data-theme="noir"] .subtitle { font-size: 12px; color: #75726b; }
+.noir-film { background: #20211f; padding: 0 12px 12px; transform: rotate(4deg); box-shadow: 12px 16px 0 #bcbab255; position: relative; }
+.film-perfs { height: 27px; background: repeating-linear-gradient(90deg,#e8e6df 0 12px,transparent 12px 24px); background-size: auto 11px; background-repeat: repeat-x; background-position: 0 8px; animation: film-roll 5s linear infinite; }
+@keyframes film-roll { to { background-position-x: 24px; } }
+.noir-frame { height: 300px; position: relative; overflow: hidden; background: linear-gradient(115deg,#191b1b 15%,#6f7470 55%,#212625); }
+.noir-window { width: 140px; height: 210px; right: 30px; top: -30px; position: absolute; background: repeating-linear-gradient(0deg,#d3d5c6 0 12px,#252b28 12px 20px); transform: skewY(-12deg); box-shadow: 0 0 60px #fff4; }
+.noir-light { position: absolute; inset: 0; background: repeating-linear-gradient(155deg,transparent 0 22px,#0007 22px 32px); clip-path: polygon(45% 0,100% 0,100% 100%,0 100%); }
+.noir-figure { position: absolute; width: 80px; height: 130px; background: #151a18; bottom: -25px; right: 85px; border-radius: 30px 30px 0 0; transform: rotate(-8deg); box-shadow: -20px -2px 40px #101513; }
+.noir-figure::before { content: ''; position: absolute; width: 39px; height: 47px; border-radius: 45%; background: #141917; left: 23px; top: -39px; }
+.noir-figure i { position: absolute; width: 75px; height: 10px; background: #141917; left: 5px; top: -32px; rotate: -10deg; }
+.noir-figure i::after { content: ''; position: absolute; width: 44px; height: 22px; background: #141917; bottom: 0; left: 14px; border-radius: 8px 8px 0 0; }
+.frame-title { position: absolute; top: 22px; left: 18px; color: #ebece0; font: 24px/.95 Georgia,serif; letter-spacing: -1px; }
+.frame-code { position: absolute; bottom: 12px; left: 15px; color: #bac2b9; font: 7px 'Courier New',monospace; letter-spacing: 1px; }
+.film-edge { color: #b9ab84; font: 7px 'Courier New',monospace; letter-spacing: 1px; padding: 2px 0; }
+[data-theme="noir"] .search-area { border-top: 1px solid #8e8c82; border-bottom: 2px solid #232421; padding: 24px 0 19px; }
+[data-theme="noir"] .search-area label { font-family: 'Courier New',monospace; }
+[data-theme="noir"] .input-group input { font: 25px Georgia,serif; }
+[data-theme="noir"] .input-group button { background: #252824; color: #f0efe5; padding: 17px 35px; font: 12px 'Courier New',monospace; }
+[data-theme="noir"] .input-group button:hover { background: #a3342b; }
+[data-theme="noir"] .search-hint { color: #79786e; }
+[data-theme="noir"] .empty-symbol { font-family: 'Courier New',monospace; }
+[data-theme="noir"] .empty-state p { color: #737269; }
+[data-theme="noir"] .section-kicker { font-family: 'Courier New',monospace; color: #8d3c32; }
+[data-theme="noir"] .filters button { border-color: #a6a397; font-family: 'Courier New',monospace; }
+[data-theme="noir"] .filters button[aria-pressed="true"] { color: #f3f0e6; background: #252824; border-color: #252824; }
+[data-theme="noir"] .cards { background: #252724; padding: 23px 16px; gap: 16px; border-top: 12px dashed #bcb7a6; border-bottom: 12px dashed #bcb7a6; }
+[data-theme="noir"] .show-card { color: #e3e3d7; border: 1px solid #777969; }
+[data-theme="noir"] .card-image { height: 235px; background: #626a5c; }
+[data-theme="noir"] .poster { filter: grayscale(1); }
+[data-theme="noir"] .card-number { color: #f7ead0; background: #34382e; font-family: 'Courier New',monospace; }
+[data-theme="noir"] .card-body { padding: 20px 15px; }
+[data-theme="noir"] .show-card h3 { font: 24px Georgia,serif; }
+[data-theme="noir"] .show-card p { color: #b0b1a2; }
+[data-theme="noir"] .card-meta,[data-theme="noir"] .card-genres { color: #b4ae8f; }
+[data-theme="noir"] .pagination,[data-theme="noir"] .site-footer { border-color: #8e8c82; }
+[data-theme="noir"] .pagination [aria-current] { background: #a3342b; color: #fff; }
+
+/* 04: an independent festival poster wall, oversized typography and acid yellow. */
+[data-theme="festival"] { background: #e8ff59; color: #1924ba; }
+[data-theme="festival"] .concept-page { padding: 0 60px; }
+[data-theme="festival"] .site-header { border-bottom: 2px solid #1924ba; }
+[data-theme="festival"] .wordmark { font-size: 33px; font-weight: 900; letter-spacing: -2px; }
+[data-theme="festival"] .wordmark span { font-size: 37px; vertical-align: middle; }
+[data-theme="festival"] .cinema-header-mark { font-weight: bold; }
+[data-theme="festival"] .new-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 25px; align-items: center; padding: 48px 0 35px; }
+[data-theme="festival"] .eyebrow { font-size: 8px; letter-spacing: 1.7px; font-weight: bold; }
+[data-theme="festival"] h1 { font: 900 clamp(45px,6vw,86px)/.93 Arial,sans-serif; letter-spacing: -5px; }
+[data-theme="festival"] h1 em { font-style: normal; color: #e8ff59; -webkit-text-stroke: 2px #1924ba; }
+[data-theme="festival"] .subtitle { font-size: 11px; }
+.festival-posters { height: 355px; position: relative; perspective: 1000px; margin-right: 20px; }
+.festival-poster { position: absolute; width: 68%; height: 305px; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; border: 1px solid #1924ba; box-shadow: 8px 12px 0 #1924ba22; transform-origin: 50% 90%; }
+.festival-poster span { font-size: 7px; line-height: 1.5; letter-spacing: 1px; }
+.festival-poster b { font-size: 38px; line-height: .95; letter-spacing: -2px; }
+.festival-poster i { font-size: 6px; letter-spacing: 1px; font-style: normal; }
+.poster-back { left: 0; top: 0; background: #f4f1e8; transform: rotate(-12deg); }
+.poster-front { right: 0; top: 30px; background: #1924ba; color: #e8ff59; transform: rotate(9deg); animation: poster-sway 7s ease-in-out infinite alternate; }
+.poster-front b { font-size: 34px; }.poster-front b em { font: italic 30px Georgia,serif; }
+.laurels { text-align: center; font: 65px Georgia,serif; letter-spacing: -5px; }
+.festival-seal { position: absolute; bottom: -2px; left: 0; width: 105px; height: 105px; background: #ff764b; color: #1924ba; border-radius: 50%; border: 1px solid #1924ba; text-align: center; padding-top: 26px; font-size: 10px; rotate: -15deg; box-shadow: 3px 4px 0 #1924ba33; }
+.festival-seal strong { display: block; font-size: 12px; }.festival-seal span { display: block; margin-top: 6px; font-size: 10px; }
+@keyframes poster-sway { to { transform: rotate(4deg) translateY(-5px); } }
+[data-theme="festival"] .search-area { background: #1924ba; color: #e8ff59; padding: 23px 28px; box-shadow: 6px 6px 0 #1924ba33; }
+[data-theme="festival"] .input-group { gap: 20px; border-bottom: 1px solid #e8ff5977; }
+[data-theme="festival"] .input-group input { font-size: 24px; font-weight: bold; }
+[data-theme="festival"] .input-group button { background: #e8ff59; color: #1924ba; padding: 15px 25px; font-size: 12px; }
+[data-theme="festival"] .input-group button:hover { background: #ff946d; }
+[data-theme="festival"] .search-hint { color: #d6ddb2; }
+[data-theme="festival"] .empty-state h2 { font-family: Arial,sans-serif; font-weight: 900; }
+[data-theme="festival"] .results-heading h2 { font: 900 38px Arial,sans-serif; letter-spacing: -1.5px; text-transform: uppercase; }
+[data-theme="festival"] .section-kicker { font-size: 8px; font-weight: bold; }
+[data-theme="festival"] .filters button { border: 1px solid #1924ba; border-radius: 30px; font-weight: bold; }
+[data-theme="festival"] .filters button[aria-pressed="true"] { background: #1924ba; color: #e8ff59; }
+[data-theme="festival"] .show-card { border: 2px solid #1924ba; background: #f5f3e7; box-shadow: 5px 5px #1924ba; }
+[data-theme="festival"] .card-image { height: 240px; background: #b3bbed; border-bottom: 2px solid; }
+[data-theme="festival"] .card-number { background: #e8ff59; color: #1924ba; border: 1px solid; border-radius: 50%; padding: 13px 9px; font-weight: bold; transform: rotate(-10deg); }
+[data-theme="festival"] .show-card h3 { font-weight: 900; font-size: 25px; letter-spacing: -1px; }
+[data-theme="festival"] .show-card p { color: #606393; }
+[data-theme="festival"] .card-genres { border-top: 1px solid #b5b5d1; padding-top: 10px; }
+[data-theme="festival"] .pagination,[data-theme="festival"] .site-footer { border-color: #1924ba; }
+[data-theme="festival"] .pagination [aria-current] { background: #1924ba; color: #e8ff59; }
+
+@media (max-width: 1100px) {
+  .prototype-bar { flex-wrap: wrap; }.variants { order: 3; width: 100%; }.variants button { flex: 1; }
+  [data-theme="cinema"] .concept-page,[data-theme="noir"] .concept-page,[data-theme="festival"] .concept-page { padding: 0 32px; }
+  .new-concept .cinema-header-mark { display: none; }
+  [data-theme="noir"] .new-hero { gap: 35px; }.noir-frame { height: 270px; }
+  .festival-poster { padding: 16px; }.poster-front b { font-size: 26px; }.poster-front b em { font-size: 23px; }
+}
+@media (max-width: 700px) {
+  .variants { overflow-x: auto; }.variants button { font-size: 10px; padding: 9px 8px; }.variants button span { display: none; }
+  [data-theme="cinema"] .concept-page,[data-theme="noir"] .concept-page,[data-theme="festival"] .concept-page { padding: 0 20px; }
+  .new-concept .site-header { min-height: 70px; }.new-concept .wordmark { font-size: 25px; }
+  .new-concept .search-area { padding: 20px; }.new-concept .input-group { flex-wrap: wrap; gap: 12px; border: 0; }
+  .new-concept .input-group input { flex-basis: 100%; padding: 12px 0; font-size: 18px; border-bottom: 1px solid #8887; }
+  .new-concept .input-group button { width: 100%; padding: 15px; }
+  .new-concept .search-hint { font-size: 9px; }.new-concept .eyebrow { font-size: 7px; letter-spacing: 1px; }
+  .new-concept .empty-state h2 { font-size: 21px; }
+  [data-theme="cinema"] .new-hero { padding-top: 30px; }
+  [data-theme="cinema"] h1 { font-size: 37px; letter-spacing: -1.5px; }
+  .cinema-scene { padding: 0 0 20px; }.wide-screen { height: 165px; }
+  .seat-row { gap: 5px; padding: 0; }.seat-row i { height: 17px; }.seat-row i:nth-child(n+10) { display: none; }
+  .screen-caption { font-size: 5px; left: 10px; letter-spacing: 1px; }.screen-format { font-size: 6px; right: 10px; }
+  [data-theme="noir"] .new-hero { grid-template-columns: 1fr; gap: 35px; padding: 30px 0; }
+  [data-theme="noir"] h1 { font-size: 42px; letter-spacing: -2px; }
+  .noir-film { width: calc(100% - 20px); max-width: 360px; margin: 0 auto 15px; transform: rotate(3deg); }
+  .noir-frame { height: 245px; }
+  [data-theme="noir"] .search-area { padding: 20px 0; }
+  [data-theme="noir"] .cards { padding: 20px 12px; }
+  [data-theme="festival"] .new-hero { grid-template-columns: 1fr; gap: 25px; padding: 30px 0; }
+  [data-theme="festival"] h1 { font-size: 58px; letter-spacing: -3px; }
+  .festival-posters { height: 315px; width: 300px; max-width: calc(100% - 20px); margin: 0 auto 15px; }
+  .festival-poster { height: 270px; }.festival-poster b { font-size: 31px; }.poster-front b { font-size: 26px; }.poster-front b em { font-size: 23px; }
+  .laurels { font-size: 50px; }
+  [data-theme="festival"] .results-heading h2 { font-size: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .new-concept *, .new-concept *::before, .new-concept *::after { animation: none !important; transition: none !important; }
+}

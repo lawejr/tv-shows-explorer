@@ -1,0 +1,106 @@
+.shelf-wall {
+  min-width: 0;
+}
+
+.shelf-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 0 7px 22px;
+}
+
+.shelf-label > span {
+  color: #e0bf88;
+  font: 11px monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.shelf-label small {
+  font-size: 6px;
+  letter-spacing: 1px;
+  color: #9b9988;
+  text-transform: uppercase;
+}
+
+.tape-shelf {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+  align-items: end;
+  min-height: 255px;
+  padding: 0 15px;
+  perspective: 1000px;
+}
+
+.empty-slot {
+  width: 145px;
+  height: 225px;
+  border: 1px dashed #b6b08b33;
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  color: #b6b08b33;
+  padding-top: 75px;
+  text-align: center;
+  font:
+    45px Georgia,
+    serif;
+}
+
+.empty-slot span {
+  display: block;
+  font: 7px monospace;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.wood-shelf {
+  height: 22px;
+  background: repeating-linear-gradient(2deg, #5d4836 0 2px, #6b533c 2px 4px, #735940 4px 5px);
+  border-top: 5px solid #9a7d55;
+  box-shadow: 0 15px 22px #0008;
+  position: relative;
+}
+
+.shelf-under {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 9px 10px;
+  font: 6px monospace;
+  letter-spacing: 1px;
+  color: #8d8977;
+  text-transform: uppercase;
+}
+
+@media (--tablet-screen) {
+  .tape-shelf {
+    gap: 15px;
+    padding: 0 8px;
+  }
+  .empty-slot {
+    height: 185px;
+  }
+  .shelf-label small {
+    display: none;
+  }
+}
+
+@media (--mobile-screen) {
+  .tape-shelf {
+    gap: 18px;
+    min-height: 185px;
+  }
+  .empty-slot {
+    height: 150px;
+    padding-top: 45px;
+    font-size: 30px;
+  }
+  .empty-slot span {
+    font-size: 6px;
+  }
+  .shelf-label {
+    padding-bottom: 10px;
+  }
+}
