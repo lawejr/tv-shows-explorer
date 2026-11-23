@@ -47,14 +47,17 @@ export function useShowSearch(query: string) {
   }, [term, attempt])
 
   const current = term && result?.query === term && result.attempt === attempt ? result : null
+  const previous = result?.status === 'success' ? result : null
+  const visible = current?.status === 'success' ? current : previous
   const isError = current?.status === 'error'
   const isLoading = Boolean(term && !current)
   const onRetry = () => setAttempt(value => value + 1)
 
   return {
-    matches: current?.shows ?? [],
+    matches: visible?.shows ?? [],
     isError,
     isLoading,
+    resultKey: visible ? `${visible.query}-${visible.attempt}` : 'empty',
     onRetry,
   }
 }

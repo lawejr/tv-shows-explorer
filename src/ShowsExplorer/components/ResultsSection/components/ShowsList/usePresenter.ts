@@ -1,14 +1,22 @@
 import type { Show } from '../../../../types'
+import styles from './styles.module.css'
 
 export interface Props {
   shows: Show[]
   selectedShow: Show | null
   page: number
+  isSearching: boolean
+  resultKey: string
   onSelect: (id: number) => void
 }
+
 export function usePresenter(p: Props) {
   return {
     hasShows: p.shows.length > 0,
+    isSearching: p.isSearching,
+    resultKey: p.resultKey,
+    status: p.isSearching ? 'Ищем новую подборку…' : 'Выберите кассету — посмотрите на экране',
+    tapeShelfClassName: `${styles['tape-shelf']} ${p.isSearching ? styles.searching : ''}`,
     items: p.shows.map((show, index) => ({
       show,
       index,

@@ -7,9 +7,15 @@ export function ResultsControls(props: Props) {
 
   return (
     <div className={styles['room-controls']}>
-      <div className={styles['room-genres']} role="group" aria-label="Жанры">
+      <div key={p.resultKey} className={styles['room-genres']} role="group" aria-label="Жанры">
         {p.genres.map(item => (
-          <button type="button" key={item.value} aria-pressed={item.selected} onClick={item.onClick}>
+          <button
+            type="button"
+            key={item.value}
+            style={item.style}
+            aria-pressed={item.selected}
+            onClick={item.onClick}
+          >
             {item.label}
           </button>
         ))}

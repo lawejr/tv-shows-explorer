@@ -19,6 +19,7 @@ export function ShowsExplorer() {
             count={p.count}
             page={p.page}
             pages={p.pages}
+            resultKey={p.resultKey}
             onGenreChange={p.onGenreChange}
             onPageChange={p.onPageChange}
           />
@@ -40,6 +41,8 @@ export function ShowsExplorer() {
         shows={p.current}
         selectedShow={p.selectedShow}
         page={p.page}
+        isSearching={p.isSearching}
+        resultKey={p.resultKey}
         onSelect={p.onSelect}
       />
       <SearchForm query={p.query} onSearch={p.onSearch} />

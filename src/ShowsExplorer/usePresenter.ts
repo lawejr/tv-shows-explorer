@@ -6,7 +6,7 @@ export function usePresenter() {
   const [genre, setGenre] = useState('All')
   const [page, setPage] = useState(1)
   const [selectedId, setSelectedId] = useState<number | null>(null)
-  const { matches, isError, isLoading, onRetry } = useShowSearch(query)
+  const { matches, isError, isLoading, resultKey, onRetry } = useShowSearch(query)
   const genres = [...new Set(matches.flatMap(show => show.genres))]
   const filtered = matches.filter(show => genre === 'All' || show.genres.includes(genre))
   const current = filtered.slice((page - 1) * 3, page * 3)
@@ -45,7 +45,9 @@ export function usePresenter() {
     count: filtered.length,
     pages: Math.ceil(filtered.length / 3),
     hasResults: matches.length > 0,
+    isSearching: isLoading && matches.length > 0,
     isError,
+    resultKey,
     onRetry,
     status,
     onSearch,

@@ -13,6 +13,20 @@
     filter 0.35s;
   box-shadow: 12px 7px 12px #0008;
   flex-shrink: 1;
+  animation: cassette-arrival 0.38s ease-out backwards;
+  animation-delay: var(--entry-delay);
+}
+
+@keyframes cassette-arrival {
+  from {
+    opacity: 0;
+    transform: translateY(18px) rotateY(-12deg) rotateZ(var(--lean));
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateY(-12deg) rotateZ(var(--lean));
+  }
 }
 
 .vhs-case:hover,
@@ -116,5 +130,6 @@
 @media (prefers-reduced-motion: reduce) {
   .vhs-case {
     transition: none;
+    animation: none;
   }
 }

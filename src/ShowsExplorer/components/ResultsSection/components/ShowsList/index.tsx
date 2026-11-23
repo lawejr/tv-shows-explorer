@@ -8,16 +8,16 @@ export function ShowsList(props: Props) {
   const p = usePresenter(props)
 
   return (
-    <div className={styles['shelf-wall']}>
+    <div className={styles['shelf-wall']} aria-busy={p.isSearching}>
       <div className={styles['shelf-label']}>
         <span>
           Ваша подборка
         </span>
-        <small>
-          Выберите кассету — посмотрите на экране
+        <small role="status" aria-live="polite">
+          {p.status}
         </small>
       </div>
-      <div className={styles['tape-shelf']}>
+      <div key={p.resultKey} className={p.tapeShelfClassName}>
         {p.hasShows ? (
           p.items.map(item => (
             <ShowItem key={item.show.id} {...item} />

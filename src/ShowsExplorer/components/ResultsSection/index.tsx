@@ -14,6 +14,8 @@ export function ResultsSection(props: Props) {
         shows={p.shows}
         selectedShow={p.selectedShow}
         page={p.page}
+        isSearching={p.isSearching}
+        resultKey={p.resultKey}
         onSelect={p.onSelect}
       />
     </section>
