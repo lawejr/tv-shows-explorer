@@ -3,12 +3,12 @@ import type { Props } from './usePresenter'
 import styles from './styles.module.css'
 
 export function ResultsControls(props: Props) {
-  const p = usePresenter(props)
+  const presenter = usePresenter(props)
 
   return (
     <div className={styles['room-controls']}>
-      <div key={p.resultKey} className={styles['room-genres']} role="group" aria-label="Жанры">
-        {p.genres.map(item => (
+      <div key={presenter.resultKey} className={styles['room-genres']} role="group" aria-label="Жанры">
+        {presenter.genres.map(item => (
           <button
             type="button"
             key={item.value}
@@ -22,12 +22,17 @@ export function ResultsControls(props: Props) {
       </div>
       <nav className={styles['room-pages']} aria-label="Страницы результатов">
         <span role="status">
-          {p.countLabel}
+          {presenter.countLabel}
         </span>
-        <button type="button" disabled={p.first} onClick={p.previous} aria-label="Предыдущая страница">
+        <button
+          type="button"
+          disabled={presenter.first}
+          onClick={presenter.previous}
+          aria-label="Предыдущая страница"
+        >
           ←
         </button>
-        {p.pages.map(item => (
+        {presenter.pages.map(item => (
           <button
             type="button"
             key={item.value}
@@ -38,7 +43,12 @@ export function ResultsControls(props: Props) {
             {item.value}
           </button>
         ))}
-        <button type="button" disabled={p.last} onClick={p.next} aria-label="Следующая страница">
+        <button
+          type="button"
+          disabled={presenter.last}
+          onClick={presenter.next}
+          aria-label="Следующая страница"
+        >
           →
         </button>
       </nav>

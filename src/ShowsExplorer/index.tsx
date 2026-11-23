@@ -6,28 +6,28 @@ import { usePresenter } from './usePresenter'
 import styles from './styles.module.css'
 
 export function ShowsExplorer() {
-  const p = usePresenter()
+  const presenter = usePresenter()
 
   return (
     <main className={styles.room}>
       <Header />
       <div className={styles.resultsToolbar}>
-        {p.hasResults ? (
+        {presenter.hasResults ? (
           <ResultsControls
-            genres={p.genres}
-            genre={p.genre}
-            count={p.count}
-            page={p.page}
-            pages={p.pages}
-            resultKey={p.resultKey}
-            onGenreChange={p.onGenreChange}
-            onPageChange={p.onPageChange}
+            genres={presenter.genres}
+            genre={presenter.genre}
+            count={presenter.count}
+            page={presenter.page}
+            pages={presenter.pages}
+            resultKey={presenter.resultKey}
+            onGenreChange={presenter.onGenreChange}
+            onPageChange={presenter.onPageChange}
           />
         ) : (
           <div className={styles.status} role="status">
-            {p.status}
-            {p.isError && (
-              <button type="button" onClick={p.onRetry}>
+            {presenter.status}
+            {presenter.isError && (
+              <button type="button" onClick={presenter.onRetry}>
                 Повторить запрос
               </button>
             )}
@@ -38,14 +38,14 @@ export function ShowsExplorer() {
         )}
       </div>
       <ResultsSection
-        shows={p.current}
-        selectedShow={p.selectedShow}
-        page={p.page}
-        isSearching={p.isSearching}
-        resultKey={p.resultKey}
-        onSelect={p.onSelect}
+        shows={presenter.current}
+        selectedShow={presenter.selectedShow}
+        page={presenter.page}
+        isSearching={presenter.isSearching}
+        resultKey={presenter.resultKey}
+        onSelect={presenter.onSelect}
       />
-      <SearchForm query={p.query} onSearch={p.onSearch} />
+      <SearchForm query={presenter.query} onSearch={presenter.onSearch} />
       <p className={styles.demoNote}>
         Данные сериалов —
         <a href="https://www.tvmaze.com/" target="_blank" rel="noreferrer">

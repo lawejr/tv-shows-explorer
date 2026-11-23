@@ -4,22 +4,22 @@ import type { Props } from './usePresenter'
 import styles from './styles.module.css'
 
 export function ShowItem(props: Props) {
-  const p = usePresenter(props)
+  const presenter = usePresenter(props)
 
   return (
     <button
       type="button"
-      className={p.className}
-      style={p.style}
-      aria-label={p.label}
-      aria-pressed={p.selected}
-      onClick={p.onClick}
+      className={presenter.className}
+      style={presenter.style}
+      aria-label={presenter.label}
+      aria-pressed={presenter.selected}
+      onClick={presenter.onClick}
     >
       <span className={styles['vhs-spine']} aria-hidden="true">
-        {p.show.title}
+        {presenter.show.title}
       </span>
       <span className={styles['vhs-front']}>
-        <Poster key={p.show.poster} src={p.show.poster} alt="" className={styles.poster} />
+        <Poster key={presenter.show.poster} src={presenter.show.poster} alt="" className={styles.poster} />
         <span className={styles['vhs-format']}>
           Vhs
           <b>
@@ -28,7 +28,7 @@ export function ShowItem(props: Props) {
         </span>
       </span>
       <span className={styles['tape-tag']}>
-        {p.tag}
+        {presenter.tag}
       </span>
     </button>
   )

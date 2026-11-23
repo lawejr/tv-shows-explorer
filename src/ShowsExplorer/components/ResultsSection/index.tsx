@@ -5,18 +5,18 @@ import type { Props } from './usePresenter'
 import styles from './styles.module.css'
 
 export function ResultsSection(props: Props) {
-  const p = usePresenter(props)
+  const presenter = usePresenter(props)
 
   return (
     <section className={styles['rental-stage']} aria-label="Полки видеопроката">
-      <ShowDetails show={p.selectedShow} />
+      <ShowDetails show={presenter.selectedShow} />
       <ShowsList
-        shows={p.shows}
-        selectedShow={p.selectedShow}
-        page={p.page}
-        isSearching={p.isSearching}
-        resultKey={p.resultKey}
-        onSelect={p.onSelect}
+        shows={presenter.shows}
+        selectedShow={presenter.selectedShow}
+        page={presenter.page}
+        isSearching={presenter.isSearching}
+        resultKey={presenter.resultKey}
+        onSelect={presenter.onSelect}
       />
     </section>
   )
