@@ -12,17 +12,29 @@ interface SearchState {
 export function useShowSearch(query: string) {
   const term = query.trim()
   const [attempt, setAttempt] = useState(0)
+  const [debouncedTerm, setDebouncedTerm] = useState(term)
   const [result, setResult] = useState<SearchState | null>(null)
 
   useEffect(() => {
-    if (!term) return undefined
+    if (term === debouncedTerm) return undefined
+
+    const timer = window.setTimeout(() => {
+      setDebouncedTerm(term)
+    }, 300)
+
+    return () => window.clearTimeout(timer)
+  }, [term, debouncedTerm])
+
+  useEffect(() => {
+    if (!debouncedTerm) return undefined
+
     const controller = new AbortController()
-    const timer = window.setTimeout(async () => {
+    const search = async () => {
       try {
-        const shows = await searchShows(term, controller.signal)
+        const shows = await searchShows(debouncedTerm, controller.signal)
         if (!controller.signal.aborted) {
           setResult({
-            query: term,
+            query: debouncedTerm,
             attempt,
             shows,
             status: 'success',
@@ -31,26 +43,27 @@ export function useShowSearch(query: string) {
       } catch {
         if (!controller.signal.aborted) {
           setResult({
-            query: term,
+            query: debouncedTerm,
             attempt,
             shows: [],
             status: 'error',
           })
         }
       }
-    }, 300)
+    }
+
+    void search()
 
     return () => {
-      window.clearTimeout(timer)
       controller.abort()
     }
-  }, [term, attempt])
+  }, [debouncedTerm, attempt])
 
   const current = term && result?.query === term && result.attempt === attempt ? result : null
   const previous = result?.status === 'success' ? result : null
   const visible = current?.status === 'success' ? current : previous
   const isError = current?.status === 'error'
-  const isLoading = Boolean(term && !current)
+  const isLoading = Boolean(term && (term !== debouncedTerm || !current))
   const onRetry = () => setAttempt(value => value + 1)
 
   return {
