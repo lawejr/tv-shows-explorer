@@ -6,8 +6,12 @@ interface SearchState {
   query: string
   attempt: number
   shows: Show[]
+  genres: string[]
   status: 'success' | 'error'
 }
+
+const emptyShows: Show[] = []
+const emptyGenres: string[] = []
 
 export function useShowSearch(query: string) {
   const term = query.trim()
@@ -31,12 +35,13 @@ export function useShowSearch(query: string) {
     const controller = new AbortController()
     const search = async () => {
       try {
-        const shows = await searchShows(debouncedTerm, controller.signal)
+        const searchResult = await searchShows(debouncedTerm, controller.signal)
         if (!controller.signal.aborted) {
           setResult({
             query: debouncedTerm,
             attempt,
-            shows,
+            shows: searchResult.shows,
+            genres: searchResult.genres,
             status: 'success',
           })
         }
@@ -46,6 +51,7 @@ export function useShowSearch(query: string) {
             query: debouncedTerm,
             attempt,
             shows: [],
+            genres: [],
             status: 'error',
           })
         }
@@ -67,7 +73,8 @@ export function useShowSearch(query: string) {
   const onRetry = () => setAttempt(value => value + 1)
 
   return {
-    matches: visible?.shows ?? [],
+    matches: visible?.shows ?? emptyShows,
+    genres: visible?.genres ?? emptyGenres,
     isError,
     isLoading,
     resultKey: visible ? `${visible.query}-${visible.attempt}` : 'empty',
