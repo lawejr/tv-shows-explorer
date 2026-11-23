@@ -110,7 +110,6 @@ ComponentName/
 ├── index.tsx
 ├── styles.module.css
 ├── usePresenter.ts
-├── components/          # только если есть дочерние компоненты
 ├── hooks/               # только для выделенных сценариев Presenter
 └── validation.ts        # только если компоненту нужна валидация
 ```
@@ -148,6 +147,14 @@ ComponentName/
   отформатированы Prettier;
 - давай вынесенным хукам и функциям предметные имена;
 - не создавай пустые `components`, `hooks` и другие папки заранее.
+
+Не используй папку `components` как обязательный промежуточный уровень для
+всех дочерних View. Компонент, используемый только владельцем, размещай прямым
+потомком его папки: `ResultsSection/ShowsList/ShowItem`, а не
+`ResultsSection/components/ShowsList/components/ShowItem`. Создавай
+`components` только для View, которое уже используют несколько частей одной
+ветки; папка `src/components` предназначена для компонентов, используемых в
+независимых ветках приложения.
 
 После создания или изменения стилей запускай `npm run format:styles`. Команда
 `npm run lint` включает `npm run format:styles:check` и должна завершаться без
@@ -198,20 +205,18 @@ ShowsExplorer/
 ├── index.tsx
 ├── styles.module.css
 ├── usePresenter.ts
-└── components/
-    ├── SearchForm/
-    │   ├── index.tsx
-    │   ├── styles.module.css
-    │   └── usePresenter.ts
-    └── ShowsList/
+├── SearchForm/
+│   ├── index.tsx
+│   ├── styles.module.css
+│   └── usePresenter.ts
+└── ShowsList/
+    ├── index.tsx
+    ├── styles.module.css
+    ├── usePresenter.ts
+    └── ShowCard/
         ├── index.tsx
         ├── styles.module.css
-        ├── usePresenter.ts
-        └── components/
-            └── ShowCard/
-                ├── index.tsx
-                ├── styles.module.css
-                └── usePresenter.ts
+        └── usePresenter.ts
 ```
 
 По пути к файлу должно быть понятно, где этот элемент находится в UI. Не
@@ -230,7 +235,7 @@ ShowsExplorer/
 Выбирай область размещения по фактическому использованию, а не по возможному
 переиспользованию в будущем:
 
-1. Используется только одним компонентом — храни внутри его папки.
+1. Используется только одним компонентом — храни прямым потомком его папки.
 2. Используется несколькими компонентами одной ветки — подними в папку
    `components` их ближайшего общего родителя.
 3. Используется в разных независимых ветках приложения — помести в

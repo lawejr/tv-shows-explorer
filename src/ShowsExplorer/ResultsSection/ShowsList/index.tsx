@@ -1,5 +1,5 @@
-import { ShowItem } from './components/ShowItem'
-import { ShowsListDecoration } from './components/ShowsListDecoration'
+import { ShowItem } from './ShowItem'
+import { ShowsListDecoration } from './ShowsListDecoration'
 import { usePresenter } from './usePresenter'
 import type { Props } from './usePresenter'
 import styles from './styles.module.css'

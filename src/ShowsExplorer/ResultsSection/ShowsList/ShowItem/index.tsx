@@ -1,4 +1,4 @@
-import { Poster } from '../../../Poster'
+import { Poster } from '../../Poster'
 import { usePresenter } from './usePresenter'
 import type { Props } from './usePresenter'
 import styles from './styles.module.css'

@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import type { Show } from '../../../../../../types'
+import type { Show } from '../../../types'
 import styles from './styles.module.css'
 
 export interface Props {

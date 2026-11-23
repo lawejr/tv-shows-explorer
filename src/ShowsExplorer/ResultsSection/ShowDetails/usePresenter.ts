@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react'
-import type { Show } from '../../../../types'
+import type { Show } from '../../types'
 
 export interface Props {
   show: Show | null

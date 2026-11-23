@@ -1,7 +1,7 @@
-import { Header } from './components/Header'
-import { ResultsControls } from './components/ResultsControls'
-import { ResultsSection } from './components/ResultsSection'
-import { SearchForm } from './components/SearchForm'
+import { Header } from './Header'
+import { ResultsControls } from './ResultsControls'
+import { ResultsSection } from './ResultsSection'
+import { SearchForm } from './SearchForm'
 import { usePresenter } from './usePresenter'
 import styles from './styles.module.css'
 

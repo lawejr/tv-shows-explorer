@@ -1,5 +1,5 @@
-import { ShowDetails } from './components/ShowDetails'
-import { ShowsList } from './components/ShowsList'
+import { ShowDetails } from './ShowDetails'
+import { ShowsList } from './ShowsList'
 import { usePresenter } from './usePresenter'
 import type { Props } from './usePresenter'
 import styles from './styles.module.css'
