@@ -120,14 +120,18 @@
 }
 
 .vcr {
-  height: 39px;
+  height: 72px;
   margin: 8px 7px 0;
-  background: linear-gradient(#434a47, #242b29);
+  background: linear-gradient(180deg, #515a56, #303835 52%, #202724);
   border: 1px solid #606960;
-  box-shadow: 8px 12px 17px #0006;
-  display: flex;
+  box-shadow:
+    8px 12px 17px #0006,
+    inset 0 1px #aab1a444;
+  display: grid;
+  grid-template-columns: 72px minmax(140px, 230px) 46px;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 12px;
   padding: 0 12px;
   transform: rotate(1deg);
 }
@@ -137,13 +141,41 @@
     7px Arial,
     sans-serif;
   text-transform: uppercase;
+  color: #c0c6b8;
 }
 
-.vcr > div {
-  flex: 1;
-  height: 9px;
-  background: #101713;
-  border-bottom: 1px solid #676d59;
+.cassette-bay {
+  position: relative;
+  height: 43px;
+  justify-self: center;
+  width: 100%;
+  border: 1px solid #070a09;
+  clip-path: polygon(5% 0, 95% 0, 100% 14%, 100% 100%, 0 100%, 0 14%);
+  background:
+    radial-gradient(circle at 28% 57%, #9ba190 0 7px, #3a403b 7px 10px, transparent 10px),
+    radial-gradient(circle at 72% 57%, #9ba190 0 7px, #3a403b 7px 10px, transparent 10px),
+    linear-gradient(180deg, #161c19, #0b100e 56%, #1c2520);
+  box-shadow:
+    inset 0 2px 3px #000,
+    0 1px #89918455;
+}
+
+.cassette-bay::before {
+  content: "";
+  position: absolute;
+  inset: 7px 16% 5px;
+  border-top: 1px solid #b2b69a66;
+  border-bottom: 1px solid #4e554c;
+}
+
+.cassette-bay::after {
+  content: "";
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  bottom: 4px;
+  height: 2px;
+  background: #b3b89944;
 }
 
 .vcr b {

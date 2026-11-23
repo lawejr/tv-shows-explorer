@@ -69,9 +69,9 @@ export function ShowDetails(props: Props) {
       </div>
       <div className={styles.vcr} aria-hidden="true">
         <span>
-          Vhs Hi-Fi
+          Vhs hi-fi stereo
         </span>
-        <div />
+        <div className={styles['cassette-bay']} />
         <b>
           00:00
         </b>
